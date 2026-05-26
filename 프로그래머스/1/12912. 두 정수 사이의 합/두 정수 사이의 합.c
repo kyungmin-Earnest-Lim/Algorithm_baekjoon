@@ -10,8 +10,7 @@ long long solution(int a, int b) {
         for (int i=b; i<=a; i++) {
             answer += i;
         }
-    }
-    else {
+    } else {
         for (int i=a; i<=b; i++) {
             answer += i;
         }
