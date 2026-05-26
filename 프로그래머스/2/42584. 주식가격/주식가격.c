@@ -12,11 +12,10 @@ int* solution(int prices[], size_t prices_len) {
         
         for (int j=i+1; j<prices_len; j++) {
             if (prices[i] > prices[j]) {
-                answer[i] = j - i;
+                answer[i] = j-i;    
                 break;
             }
         }
     }
-    
     return answer;
 }
