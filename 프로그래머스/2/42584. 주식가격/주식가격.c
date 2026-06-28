@@ -8,14 +8,14 @@ int* solution(int prices[], size_t prices_len) {
     int* answer = (int*)malloc(sizeof(int) * prices_len);
     
     for (int i=0; i<prices_len; i++) {
-        answer[i] = prices_len - 1 - i;
-        
+        answer[i] = prices_len - i - 1;    
         for (int j=i+1; j<prices_len; j++) {
             if (prices[i] > prices[j]) {
-                answer[i] = j-i;    
+                answer[i] = j-i;
                 break;
             }
         }
     }
+        
     return answer;
 }
